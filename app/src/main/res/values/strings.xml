@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">HaVagas</string>
+    <string name="ha_vagas_title">Há Vagas!</string>
+    <string name="nome">Nome</string>
+    <string name="email">Email</string>
+    <string name="checkbox_text">Desejo receber e-mails de novas oportunidades</string>
+    <string name="telefone">Telefone</string>
+    <string name="incluir_celular">Incluir celular</string>
+    <string name="genero">Gênero</string>
+    <string name="rb_feminino">Feminino</string>
+    <string name="rb_masculino">Masculino</string>
+    <string name="data_de_nascimento">Data de Nascimento</string>
+
+    <string-array name="tipoTelefone">
+        <item>Comercial</item>
+        <item>Residencial</item>
+    </string-array>
 </resources>
