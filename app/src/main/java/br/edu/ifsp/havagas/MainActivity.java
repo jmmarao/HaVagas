@@ -18,4 +18,7 @@ public class MainActivity extends AppCompatActivity {
         DialogFragment newFragment = new DatePickerFragment();
         newFragment.show(getSupportFragmentManager(), "datePicker");
     }
+
+    public void onCheckboxClicked(View view) {
+    }
 }

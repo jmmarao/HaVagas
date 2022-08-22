@@ -10,6 +10,20 @@
     <string name="rb_feminino">Feminino</string>
     <string name="rb_masculino">Masculino</string>
     <string name="data_de_nascimento">Data de Nascimento</string>
+    <string name="celular">Celular</string>
+    <string name="formacao">Formação</string>
+    <string name="ck_ensino_fundamental">Ensino fundamental</string>
+    <string name="ck_ensino_medio">Ensino médio</string>
+    <string name="ck_mestrado">Mestrado</string>
+    <string name="ck_especializacao">Especialização</string>
+    <string name="ck_doutorado">Doutorado</string>
+    <string name="ano_de_formatura">Ano de formatura</string>
+    <string name="ck_graduacao">Graduação</string>
+    <string name="ano_de_conclusao">Ano de conclusão</string>
+    <string name="instituicao">Instituição</string>
+    <string name="titulo_da_dissertacao">Título da dissertação</string>
+    <string name="orientador">Orientador(a)</string>
+    <string name="titulo_da_monografia">Título da monografia</string>
 
     <string-array name="tipoTelefone">
         <item>Comercial</item>
