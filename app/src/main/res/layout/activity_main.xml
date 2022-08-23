@@ -56,6 +56,7 @@
             android:layout_height="wrap_content">
 
             <Spinner
+                android:id="@+id/spinnerTipoTelefone"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -136,63 +137,32 @@
             android:onClick="showDatePickerDialog"
             android:padding="5dp" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:padding="5dp"
-            android:text="@string/formacao" />
+            android:layout_height="wrap_content">
 
-        <CheckBox
-            android:id="@+id/ckFundamental"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onCheckboxClicked"
-            android:padding="5dp"
-            android:text="@string/ck_ensino_fundamental" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="0.1"
+                android:padding="13dp"
+                android:text="@string/formacao" />
 
-        <EditText
-            android:id="@+id/inputFundamental"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="@string/ano_de_formatura"
-            android:inputType="date"
-            android:padding="5dp"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/ckMedio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onCheckboxClicked"
-            android:padding="5dp"
-            android:text="@string/ck_ensino_medio" />
+            <Spinner
+                android:id="@+id/spinnerFormacao"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:entries="@array/formacao"
+                android:minHeight="48dp"
+                android:padding="5dp" />
+        </LinearLayout>
 
         <EditText
-            android:id="@+id/inputMedio"
+            android:id="@+id/inputAnoConclusao"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:hint="@string/ano_de_formatura"
-            android:inputType="date"
-            android:padding="5dp"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/ckGraduacao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onCheckboxClicked"
-            android:padding="5dp"
-            android:text="@string/ck_graduacao" />
-
-        <EditText
-            android:id="@+id/inputGraduacaoConclusao"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="@string/ano_de_conclusao"
@@ -201,63 +171,7 @@
             android:visibility="gone" />
 
         <EditText
-            android:id="@+id/inputGraduacaoInstituicao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="@string/instituicao"
-            android:inputType="text"
-            android:padding="5dp"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/ckEspecializacao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onCheckboxClicked"
-            android:padding="5dp"
-            android:text="@string/ck_especializacao" />
-
-        <EditText
-            android:id="@+id/inputEspecializacaoConclusao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="@string/ano_de_conclusao"
-            android:inputType="date"
-            android:padding="5dp"
-            android:visibility="gone" />
-
-        <EditText
-            android:id="@+id/inputEspecializacaoInstituicao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="@string/instituicao"
-            android:inputType="text"
-            android:padding="5dp"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/ckMestrado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onCheckboxClicked"
-            android:padding="5dp"
-            android:text="@string/ck_mestrado" />
-
-        <EditText
-            android:id="@+id/inputMestradoConclusao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="@string/ano_de_conclusao"
-            android:inputType="date"
-            android:padding="5dp"
-            android:visibility="gone" />
-
-        <EditText
-            android:id="@+id/inputMestradoInstituicao"
+            android:id="@+id/inputInstituicao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -267,65 +181,17 @@
             android:visibility="gone" />
 
         <EditText
-            android:id="@+id/inputMestradoTitulo"
+            android:id="@+id/inputPosGraduacaoTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:hint="@string/titulo_da_dissertacao"
+            android:hint="@string/titulo_do_trabalho"
             android:inputType="text"
             android:padding="5dp"
             android:visibility="gone" />
 
         <EditText
-            android:id="@+id/inputMestradoOrientador"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="@string/orientador"
-            android:inputType="text"
-            android:padding="5dp"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/ckDoutorado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onCheckboxClicked"
-            android:padding="5dp"
-            android:text="@string/ck_doutorado" />
-
-        <EditText
-            android:id="@+id/inputDoutoradoConclusao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="@string/ano_de_conclusao"
-            android:inputType="date"
-            android:padding="5dp"
-            android:visibility="gone" />
-
-        <EditText
-            android:id="@+id/inputDoutoradoInstituicao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="@string/instituicao"
-            android:inputType="text"
-            android:padding="5dp"
-            android:visibility="gone" />
-
-        <EditText
-            android:id="@+id/inputDoutoradoTitulo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="@string/titulo_da_monografia"
-            android:inputType="text"
-            android:padding="5dp"
-            android:visibility="gone" />
-
-        <EditText
-            android:id="@+id/inputDoutoradoOrientador"
+            android:id="@+id/inputOrientador"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
