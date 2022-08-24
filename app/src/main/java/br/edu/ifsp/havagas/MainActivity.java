@@ -25,7 +25,31 @@ public class MainActivity extends AppCompatActivity {
                     Candidato candidato = getCandidato();
 
                     String toastText = candidato.toString();
-                    toastText = "";
+
+                    if (activityMainBinding.ckCelular.isChecked())
+                        toastText += "\n\tCelular: " + activityMainBinding.inputCelular.getText().toString();
+
+                    if (activityMainBinding.spinnerFormacao.getSelectedItem().toString().equals("Fundamental") ||
+                            activityMainBinding.spinnerFormacao.getSelectedItem().toString().equals("Médio") ||
+                            activityMainBinding.spinnerFormacao.getSelectedItem().toString().equals("Graduação") ||
+                            activityMainBinding.spinnerFormacao.getSelectedItem().toString().equals("Especialização") ||
+                            activityMainBinding.spinnerFormacao.getSelectedItem().toString().equals("Mestrado") ||
+                            activityMainBinding.spinnerFormacao.getSelectedItem().toString().equals("Doutorado")) {
+                        toastText += "\n\tAno de conclusão: " + activityMainBinding.inputAnoConclusao.getText().toString();
+                    }
+
+                    if (activityMainBinding.spinnerFormacao.getSelectedItem().toString().equals("Graduação") ||
+                            activityMainBinding.spinnerFormacao.getSelectedItem().toString().equals("Especialização") ||
+                            activityMainBinding.spinnerFormacao.getSelectedItem().toString().equals("Mestrado") ||
+                            activityMainBinding.spinnerFormacao.getSelectedItem().toString().equals("Doutorado")) {
+                        toastText += "\n\tInstituição: " + activityMainBinding.inputInstituicao.getText().toString();
+                    }
+
+                    if (activityMainBinding.spinnerFormacao.getSelectedItem().toString().equals("Mestrado") ||
+                            activityMainBinding.spinnerFormacao.getSelectedItem().toString().equals("Doutorado")) {
+                        toastText += "\n\tTítulo: " + activityMainBinding.inputPosGraduacaoTitulo.getText().toString();
+                        toastText += "\n\tOrientador: " + activityMainBinding.inputOrientador.getText().toString();
+                    }
 
                     Toast.makeText(this, toastText, Toast.LENGTH_LONG).show();
                 }
