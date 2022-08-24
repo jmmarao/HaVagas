@@ -16,6 +16,9 @@
     <string name="instituicao">Instituição</string>
     <string name="orientador">Orientador(a)</string>
     <string name="titulo_do_trabalho">Título do trabalho</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="limpar">Limpar</string>
+    <string name="vagas_de_interesse">Vagas de interesse</string>
 
     <string-array name="tipoTelefone">
         <item>Comercial</item>
@@ -23,6 +26,7 @@
     </string-array>
 
     <string-array name="formacao">
+        <item>---</item>
         <item>Fundamental</item>
         <item>Médio</item>
         <item>Graduação</item>

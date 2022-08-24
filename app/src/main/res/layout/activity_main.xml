@@ -80,7 +80,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="250dp"
-            android:onClick="onCheckboxClicked"
             android:padding="5dp"
             android:text="@string/incluir_celular" />
 
@@ -131,10 +130,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="@string/data_de_nascimento"
-            android:importantForAutofill="no"
             android:inputType="date"
             android:minHeight="48dp"
-            android:onClick="showDatePickerDialog"
             android:padding="5dp" />
 
         <LinearLayout
@@ -199,5 +196,32 @@
             android:inputType="text"
             android:padding="5dp"
             android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/inputVagasDeInteresse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="@string/vagas_de_interesse"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="5dp" />
+
+        <Button
+            android:id="@+id/buttonCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="@string/cadastrar" />
+
+        <Button
+            android:id="@+id/buttonLimpar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="@string/limpar" />
     </LinearLayout>
 </ScrollView>
