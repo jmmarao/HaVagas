@@ -31,11 +31,35 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
+        activityMainBinding.buttonLimpar.setOnClickListener(view -> {
+            activityMainBinding.inputNome.getText().clear();
+            activityMainBinding.inputEmail.getText().clear();
+            activityMainBinding.ckEmail.setChecked(false);
+            activityMainBinding.spinnerTipoTelefone.setSelection(0);
+            activityMainBinding.inputTelefone.getText().clear();
+            activityMainBinding.ckCelular.setChecked(false);
+            activityMainBinding.inputCelular.getText().clear();
+            activityMainBinding.radioButtonFeminino.setChecked(true);
+            activityMainBinding.inputNascimento.getText().clear();
+            activityMainBinding.inputVagasDeInteresse.getText().clear();
+            activityMainBinding.spinnerFormacao.setSelection(0);
+            activityMainBinding.inputAnoConclusao.getText().clear();
+            activityMainBinding.inputInstituicao.getText().clear();
+            activityMainBinding.inputPosGraduacaoTitulo.getText().clear();
+            activityMainBinding.inputOrientador.getText().clear();
+        });
+
+        activityMainBinding.ckCelular.setOnClickListener(view -> {
+            if (activityMainBinding.ckCelular.isChecked())
+                activityMainBinding.inputCelular.setVisibility(View.VISIBLE);
+            else
+                activityMainBinding.inputCelular.setVisibility(View.GONE);
+        });
+
         activityMainBinding.spinnerFormacao.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                System.out.println(i);
                 if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6) {
                     activityMainBinding.inputAnoConclusao.setVisibility(View.VISIBLE);
 
@@ -75,8 +99,5 @@ public class MainActivity extends AppCompatActivity {
         String vagasDeInteresse = activityMainBinding.inputVagasDeInteresse.getText().toString();
 
         return new Candidato(nome, email, tipoTelefone, telefone, genero, dataNasc, vagasDeInteresse);
-    }
-
-    public void onCheckboxClicked(View view) {
     }
 }
