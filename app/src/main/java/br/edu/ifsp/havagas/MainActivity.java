@@ -12,6 +12,16 @@ import br.edu.ifsp.havagas.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding activityMainBinding;
+    private String NOME_VALUE;
+    private String EMAIL_VALUE;
+    private String TELEFONE_VALUE;
+    private String CELULAR_VALUE;
+    private String NASCIMENTO_VALUE;
+    private String ANO_CONCLUSAO_VALUE;
+    private String INSTITUICAO_VALUE;
+    private String POS_GRADUACAO_TITULO_VALUE;
+    private String ORIENTADOR;
+    private String VAGAS_DE_INTERESSE_VALUE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +120,21 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(NOME_VALUE, activityMainBinding.inputNome.getText().toString());
+        outState.putString(EMAIL_VALUE, activityMainBinding.inputEmail.getText().toString());
+        outState.putString(TELEFONE_VALUE, activityMainBinding.inputTelefone.getText().toString());
+        outState.putString(CELULAR_VALUE, activityMainBinding.inputCelular.getText().toString());
+        outState.putString(NASCIMENTO_VALUE, activityMainBinding.inputNascimento.getText().toString());
+        outState.putString(ANO_CONCLUSAO_VALUE, activityMainBinding.inputAnoConclusao.getText().toString());
+        outState.putString(INSTITUICAO_VALUE, activityMainBinding.inputInstituicao.getText().toString());
+        outState.putString(POS_GRADUACAO_TITULO_VALUE, activityMainBinding.inputPosGraduacaoTitulo.getText().toString());
+        outState.putString(ORIENTADOR, activityMainBinding.inputOrientador.getText().toString());
+        outState.putString(VAGAS_DE_INTERESSE_VALUE, activityMainBinding.inputVagasDeInteresse.getText().toString());
     }
 
     @NonNull
